@@ -14,8 +14,8 @@ public class DungeonGenerator :MonoBehaviour
     AvalibleRooms avalibleRooms;
     void InitGrid()
     {
-        avalibleRooms = Resources.Load<AvalibleRooms>("Rooms/New Avalible Rooms");
-        int gridSize = 3 * _numberOfRooms;
+        avalibleRooms = Resources.Load<AvalibleRooms>("Rooms/New Avalible Rooms");//carreguem les posibles habitacions que després instanciarem
+        int gridSize = 3 * _numberOfRooms; //fem que el grid tingui un tamany suficient.
         Grid = new Room[gridSize, gridSize];
     }
     void ShowDungeon()

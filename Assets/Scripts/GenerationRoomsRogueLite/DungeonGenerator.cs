@@ -82,6 +82,7 @@ public class DungeonGenerator :MonoBehaviour
     {
         foreach(var room in createdRooms)
         {
+            //Cada room pot retornar les cordenades del grid del seu voltant
             List<Vector2Int> neighborCoordinates = room.getNeighbourCoordinates();
             foreach(Vector2Int coordinate in neighborCoordinates)
             {

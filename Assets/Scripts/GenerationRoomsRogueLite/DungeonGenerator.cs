@@ -14,15 +14,15 @@ public class DungeonGenerator :MonoBehaviour
     AvalibleRooms avalibleRooms;
     void InitGrid()
     {
-        avalibleRooms = Resources.Load<AvalibleRooms>("Rooms/New Avalible Rooms");//carreguem les posibles habitacions que després instanciarem
+        avalibleRooms = Resources.Load<AvalibleRooms>("Rooms/New Avalible Rooms");//carreguem les possibles habitacions que després instanciarem
         int gridSize = 3 * _numberOfRooms; //fem que el grid tingui un tamany suficient.
         Grid = new Room[gridSize, gridSize];
     }
     void ShowDungeon()
     {
-        //Aqui crearem les sales al mon de unity
-        //hem de recorre el grid i per cada posició diferent de null cridar a que es crei una sala.
-        //pista al ser una matriu que no te pq ser cuadrada, podem fer  Grid.GetLength(0) i  Grid.GetLength(1) com a limit de cada bucle anidat
+        //Aquí crearem les sales al món de Unity.
+        //Hem de recórrer el grid i, per cada posició diferent de null, cridar a que es creï una sala.
+        //Pista: en ser una matriu que no té per què ser quadrada, podem fer Grid.GetLength(0) i Grid.GetLength(1) com a límit de cada bucle anidat.
     }
 
     public void CreateRoom(Room actualRoom)
@@ -73,36 +73,36 @@ public class DungeonGenerator :MonoBehaviour
 
     private void ConnectNeighbours(List<Room> createdRooms)
     {
-        // per cada room creada
-        // obtenir la llista de coordenades dels seus veins possibles =>  room.getNeighbourCoordinates()
-        // recórrer aquestes coordenades
-        // mirar al grid si hi ha una room en aquella posició o es null
-        // si n'hi ha una, connectar la room actual amb la room veina => room.Connect(neighbor);
+        //Per cada room creada,
+        //obtenir la llista de coordenades dels seus veïns possibles => room.getNeighbourCoordinates()
+        //recórrer aquestes coordenades
+        //mirar al grid si hi ha una room en aquella posició o és null
+        //si n'hi ha una, connectar la room actual amb la room veïna => room.Connect(neighbor);
     }
 
     private void AddRooms(Queue<Room> roomsToCreate, List<Room> createdRooms)
     {
-        //mentra roomsTocreate sea > que 0 i el nombre de rooms creades sigui inferior al total
-        //hem de treure de la cua una room
-        // guardar al grid que en aquelles cordenades hi sera aquesta room
-        //afegir a la llista la room que hem tret de la cua.
-        //cridar a que s'afegeixen els veins d'aquesta room
+        //Mentre roomsToCreate sigui > 0 i el nombre de rooms creades sigui inferior al total,
+        //hem de treure de la cua una room.
+        //Guardar al grid que en aquelles coordenades hi serà aquesta room.
+        //Afegir a la llista la room que hem tret de la cua.
+        //Cridar a que s'afegeixin els veïns d'aquesta room.
     }
 
     private void AddNeighbours(Room currentRoom, Queue<Room> roomsToCreate)
     {
-        //obtenim la llista de cordenades de veïns que encara estiguin lliures.
-        //calculem un numero aleatori de veins que tindra aquesta sala entre 1 i el maxim de veïns disponibles.
-        //cridem a que es crein els veïns de veritat
+        //Obtenim la llista de coordenades de veïns que encara estiguin lliures.
+        //Calculem un número aleatori de veïns que tindrà aquesta sala entre 1 i el màxim de veïns disponibles.
+        //Cridem a que es creïn els veïns de veritat.
     }
 
 
-    // Retorna coordenades de veïns disponibles (encara no creats).
+    //Retorna coordenades de veïns disponibles (encara no creats).
     private List<Vector2Int> GetAvalibleNeighbors(Room currentRoom)
     {
-        //mirem les posicions del voltant de la sala amb currentRoom.getNeighbourCoordinates();
-        //fem una llista per guardar les cordinades que estaran disponibles.
-        //recorrem els possibles veïns i mirem si aquelles cordinades al grid son null, si ho son afegim a la llista que retornarem
+        //Mirem les posicions del voltant de la sala amb currentRoom.getNeighbourCoordinates();
+        //Fem una llista per guardar les coordenades que estaran disponibles.
+        //Recorrem els possibles veïns i mirem si aquelles coordenades al grid són null; si ho són, les afegim a la llista que retornarem.
 
        
         return null;
@@ -111,10 +111,10 @@ public class DungeonGenerator :MonoBehaviour
 
     private void CreateNeighbors(List<Vector2Int> availableNeighbors, int numberOfNeighbors, Queue<Room> roomsToCreate)
     {
-        //fem un for per la cuantitat de veïns que volem
-        //per ferlo més aleatori, dels availableNeighbors escollim un  a l'atzar
-        //afegim a la  cua roomsToCreate una nova room amb les cordenades d'aquest veï
-        //per no afegir al grid que es procesara despre´s dos vegades el mateix aquesta selecio l'em de elimianr d'availableNeighbors
+        //Fem un for per la quantitat de veïns que volem.
+        //Per fer-ho més aleatori, dels availableNeighbors escollim un a l'atzar.
+        //Afegim a la cua roomsToCreate una nova room amb les coordenades d'aquest veí.
+        //Per no afegir al grid que es processarà després dos cops el mateix, aquesta selecció l'hem d'eliminar d'availableNeighbors.
 
     }
 

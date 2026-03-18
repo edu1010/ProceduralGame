@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4420090119206638031}
   - component: {fileID: 368520295525765081}
   - component: {fileID: 6855522276799343516}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: RandomizeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 1552033007252254238}
   - component: {fileID: 8862478698753809883}
   - component: {fileID: -381656877929168688}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

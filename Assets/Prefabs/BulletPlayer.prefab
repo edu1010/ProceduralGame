@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6071372599195780337}
   - component: {fileID: 2594441625179901719}
   - component: {fileID: -3540891626049549468}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: BulletPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,4 +185,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletPlayer
   speed: 6
-  damage: 10

@@ -110,7 +110,9 @@ public class DungeonGenerator :MonoBehaviour
         _numberOfRooms = numberOfRooms;
         GenerateDungeon();
         ShowDungeon();
+        GameManager.Instance.Player.transform.position = _parent.transform.GetChild(0).transform.position;//Podem agafar de room el startplayer tambe
+
     }
 
-    
+
 }
